@@ -12,6 +12,8 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import NotFound from './components/NotFound/NotFound';
 import Home from './components/Home/Home';
 import AddBooks from './components/AddBooks/AddBooks';
+import CheckOut from './components/CheckOut/CheckOut';
+import Orders from './components/Orders/Orders';
 
 export const UserContext=createContext();
 
@@ -37,8 +39,11 @@ function App() {
                 <Route path="/addbooks">
                    <AddBooks></AddBooks>
                 </Route>
-                <PrivateRoute path="/pickRide/:rideName">
-                    
+                <PrivateRoute path="/checkout/:id">
+                    <CheckOut></CheckOut>
+                </PrivateRoute>
+                <PrivateRoute path="/orders/:id">
+                    <Orders></Orders>
                 </PrivateRoute>
                 <Route path="*">
                     <NotFound></NotFound>

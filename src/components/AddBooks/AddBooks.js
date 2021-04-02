@@ -8,7 +8,10 @@ const AddBooks = () => {
     const onSubmit = data => {
         console.log(data);
         const bookData={
-            name: data.name,
+            bookName: data.bookName,
+            //id: data.id,
+            authorName:data.authorName,
+            price:data.price,
             imageUrl: imageUrl,
         };
         const url=`http://localhost:5000/addBooks`;
@@ -42,11 +45,13 @@ const AddBooks = () => {
             <h1>Add Books</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
                 
-                <input name="name" defaultValue="Book Name" ref={register} />
+                <input name="bookName" defaultValue="Book Name" ref={register} />
                 <br/>
-                <input name="exampleRequired" ref={register({ required: true })} />
+                {/* <input name="id" defaultValue="1" ref={register} /> */}
                 <br/>
-                <input name="example" defaultValue="test" ref={register} />
+                <input name="authorName" ref={register({ required: true })} />
+                <br/>
+                <input name="price" defaultValue="test" ref={register} />
                 <br/>
                 <input name="example" type="file" onChange={handleImageUpload}/>
                 {errors.exampleRequired && <span>This field is required</span>}
