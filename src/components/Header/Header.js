@@ -23,7 +23,7 @@ const Header = () => {
                     <Nav.Link eventKey="link-1">Destination</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="link-2">Blog</Nav.Link>
+                    <Nav.Link eventKey="/admin">Admin</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                     <Nav.Link eventKey="link-2">Contact</Nav.Link>

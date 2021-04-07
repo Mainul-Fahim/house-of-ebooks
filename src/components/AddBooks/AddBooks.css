@@ -1,0 +1,21 @@
+.addbook{
+    background-color: whitesmoke;
+    height: 550px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.addbook form{
+    padding: 10% 25%;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color:lightcyan;
+    border-radius: 20px;
+}
+.addbook input{
+    margin: 5px 5px;
+   
+}
+.addleft{
+    width: 100%;
+    border-radius: 25px;
+}

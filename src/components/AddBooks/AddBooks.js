@@ -1,6 +1,9 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
+import Admin from '../Admin/Admin';
+import './AddBooks.css';
+
 const AddBooks = () => {
 
     const { register, handleSubmit, watch, errors } = useForm();
@@ -41,23 +44,30 @@ const AddBooks = () => {
     }
     
     return (
-        <div>
+        <div className="row">
+            <div className="col-md-3 addleft">
+                <Admin></Admin>
+            </div>
+            <div className="col-md-9 addbook">
             <h1>Add Books</h1>
+            <br/>
             <form onSubmit={handleSubmit(onSubmit)}>
-                
-                <input name="bookName" defaultValue="Book Name" ref={register} />
+                <h5>Book Name</h5>
+                <input name="bookName" placeholder="Book Name" ref={register} />
                 <br/>
-                {/* <input name="id" defaultValue="1" ref={register} /> */}
+                <h5>Author Name</h5>
+                <input name="authorName" placeholder="Author Name" ref={register({ required: true })} />
                 <br/>
-                <input name="authorName" ref={register({ required: true })} />
+                <h5>Price</h5>
+                <input name="price" placeholder="Price" ref={register} />
                 <br/>
-                <input name="price" defaultValue="test" ref={register} />
-                <br/>
+                <h5>Add Photo</h5>
                 <input name="example" type="file" onChange={handleImageUpload}/>
                 {errors.exampleRequired && <span>This field is required</span>}
                 <br/>
                 <input type="submit" />
             </form>
+            </div>
         </div>
     );
 };

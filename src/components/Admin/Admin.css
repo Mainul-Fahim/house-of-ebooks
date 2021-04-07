@@ -1,0 +1,15 @@
+.sidebar{
+    border-radius: 25px;
+    width: 100%;
+    height: 600px;
+    margin-left: 20px;
+    padding: 5px 5px;
+    background-color: wheat;
+}
+.sidebar p{
+    text-decoration: none;
+    color: black;
+}
+.sidebar p:hover{
+    background-color:aquamarine;
+}

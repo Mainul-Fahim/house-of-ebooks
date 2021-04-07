@@ -12,7 +12,6 @@ const Books = (props) => {
             <Row>
                 <Col><p>{price}</p></Col>
                 <Col><Link to={`/checkout/${_id}`}><Button>Buy Now</Button></Link></Col>
-                {/* <Link to={`/pickRIde/${ride_name}`}>{ride_name}</Link> */}
             </Row>
         </div>
     );
