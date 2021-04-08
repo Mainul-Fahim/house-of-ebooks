@@ -12,6 +12,20 @@ const ManageBooks = (props) => {
                 console.log(data);
                 setBooks(data)});
     }, [])
+   
+   const deleteBook=id=>{
+        console.log(id);
+        fetch(`http://localhost:5000/delete/${id}`,{
+            method: 'DELETE'
+        })
+        .then(res=>res.json())
+        .then(result =>{
+            console.log("deleted",result);
+            const deletedBook =document.getElementById('deletedBook');
+            deletedBook.style.display = 'none';
+        })
+   }
+   
     return (
         <div className="row">
             <div className="col-md-3">
@@ -33,13 +47,13 @@ const ManageBooks = (props) => {
                     <tbody>
                         
                             {
-                                books.map(book =><tr>
+                                books.map(book =><tr id="deletedBook">
                                     <td>{book._id}</td>
                                     <td>
                                     {book.bookName}</td>
                                     <td>{book.authorName}</td>
                                     <td>{book.price}</td>
-                                    <td><button>del</button></td></tr>)
+                                    <td><button onClick={() =>deleteBook(book._id)}>del</button></td></tr>)
                             }
                        
                         

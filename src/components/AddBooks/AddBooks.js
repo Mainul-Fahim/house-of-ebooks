@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
+import { Link } from 'react-router-dom';
 import Admin from '../Admin/Admin';
 import './AddBooks.css';
 
@@ -25,7 +26,8 @@ const AddBooks = () => {
             },
             body: JSON.stringify(bookData)
         })
-        .then(res =>console.log(res))
+        .then(res =>{
+            console.log(res)})
     };
     
     const handleImageUpload=event=>{

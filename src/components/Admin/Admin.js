@@ -12,6 +12,7 @@ const Admin = () => {
                 <div className="col-md-3 sidebar">
                     <h4>House of Books</h4>
                     <br />
+                    <Link to='/'><p>Home</p></Link>
                     <Link to='/managebooks'><p>Manage books</p></Link>
                     <Link to='/addbooks'><p>Add books</p></Link>
                 </div>
