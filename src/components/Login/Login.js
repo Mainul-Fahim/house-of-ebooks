@@ -6,7 +6,7 @@ import { Link, useHistory, useLocation } from 'react-router-dom';
 import firebase from "firebase/app";
 import "firebase/auth";
 import { UserContext } from '../../App';
-
+import './Login.css';
 
 if(firebase.apps.length===0){
     firebase.initializeApp(firebaseConfig);
@@ -50,8 +50,9 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className="login">
             <h1>Google SIgn</h1>
+            <br/>
             <Button onClick={handleGoogleSignIn}>Google Sign In</Button>
         </div>
     );

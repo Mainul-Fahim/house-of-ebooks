@@ -12,7 +12,8 @@ const Header = () => {
         <div>
             <Row>
                 <Col className="header-logo">
-                    <h3>House Of Books</h3>
+                    <br/>
+                    <h3>House Of E-Books</h3>
                 </Col>
                 <Col>
                 <Nav fill variant="pills" className="justify-content-end mt-4 mr-5" activeKey="/home">

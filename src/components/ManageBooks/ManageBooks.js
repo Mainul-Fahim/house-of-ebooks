@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table } from 'react-bootstrap';
+import { Button, Table } from 'react-bootstrap';
 import Admin from '../Admin/Admin';
 import './ManageBooks.css';
 
@@ -53,7 +53,7 @@ const ManageBooks = (props) => {
                                     {book.bookName}</td>
                                     <td>{book.authorName}</td>
                                     <td>{book.price}</td>
-                                    <td><button onClick={() =>deleteBook(book._id)}>del</button></td></tr>)
+                                    <td><Button onClick={() =>deleteBook(book._id)}>Delete</Button></td></tr>)
                             }
                        
                         

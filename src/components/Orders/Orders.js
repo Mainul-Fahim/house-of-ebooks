@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { UserContext } from '../../App';
+import Header from '../Header/Header';
+import './Orders.css';
 
 const Orders = () => {
    const [loggedInUser,setLoggedInUser]=useContext(UserContext);
@@ -15,12 +17,14 @@ const Orders = () => {
    },[id])
     return (
         <div>
+            <Header></Header>
+            <h3 style={{textAlign:"center",marginTop:"3%"}}>Ordered Books</h3>
             {
-                orders.map(order=><div>
+                orders.map(order=><div className="orders">
                     <h4>Name: {order.name}</h4>
-                    <h4>Email: {order.email}</h4>
+                    <p>Email: {order.email}</p>
                     <h4>Book Name: {order.bookName}</h4>
-                    <h4>Book Price: {order.price}</h4>
+                    <p><strong>Book Price: {order.price}</strong></p>
                 </div>)
             }
         </div>
