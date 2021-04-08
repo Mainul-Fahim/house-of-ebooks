@@ -6,7 +6,7 @@ const Home = () => {
     
     const [books,setBooks]=useState([]);
     useEffect(() =>{
-        fetch('http://localhost:5000/books')
+        fetch('https://limitless-plateau-92194.herokuapp.com/books')
         .then(res=>res.json())
         .then(data=>setBooks(data));
     },[])    

@@ -6,7 +6,7 @@ import './ManageBooks.css';
 const ManageBooks = (props) => {
     const [books, setBooks] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/books')
+        fetch('https://limitless-plateau-92194.herokuapp.com/books')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -15,7 +15,7 @@ const ManageBooks = (props) => {
    
    const deleteBook=id=>{
         console.log(id);
-        fetch(`http://localhost:5000/delete/${id}`,{
+        fetch(`https://limitless-plateau-92194.herokuapp.com/delete/${id}`,{
             method: 'DELETE'
         })
         .then(res=>res.json())

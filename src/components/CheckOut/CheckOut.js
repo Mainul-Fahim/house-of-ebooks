@@ -14,7 +14,7 @@ const CheckOut = () => {
     const [orderDetails,setOrderDetails]=useState({});
 
     useEffect(() =>{
-        fetch('http://localhost:5000/books')
+        fetch('https://limitless-plateau-92194.herokuapp.com/books')
         .then(res=>res.json())
         .then(data=>{
             console.log(data);
@@ -22,7 +22,7 @@ const CheckOut = () => {
     },[])
     useEffect(() =>{
         
-        fetch(`http://localhost:5000/book/${id}`)
+        fetch(`https://limitless-plateau-92194.herokuapp.com/book/${id}`)
         .then(res=>res.json())
         .then(data=>{
             console.log(data);
@@ -35,7 +35,7 @@ const CheckOut = () => {
     const handleCheckOut=()=>{
 
         const orderedBook={...loggedInUser,...checkOutDate,...orderDetails};
-        fetch('http://localhost:5000/addOrders',{
+        fetch('https://limitless-plateau-92194.herokuapp.com/addOrders',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(orderedBook)
