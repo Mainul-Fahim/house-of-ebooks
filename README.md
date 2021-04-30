@@ -1,6 +1,11 @@
 # House of E-Books
 
-This is an E-book webapp.User can read and buy E-book from this webapp.There is also an admin panel where admin can add and delete e-books.
+A complete MERN stack e-commerce webApp where :-
+
+1.User can select and buy an E-Book after Sign in.(Firebase authentication is implemented) User can see his/her orders from Orders List.
+2.User can also proceed to checkout.
+3.Admin can see all orders,add book and manage services.
+4.Technology: React, Router, Node.js, Express, MongoDB,Bootstrap, Heroku, Firebase. 
 
 ## Live Site Link
 
